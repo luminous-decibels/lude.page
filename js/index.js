@@ -39,6 +39,8 @@ function reorderCards(container, cardContainer, cards, cardIndex) {
 
 // Initial check
 if (window.innerWidth < 700) {
+  const scoreContainer = document.getElementsByClassName('score-circle')[0];
+  scoreContainer.remove();
   const container = document.getElementsByClassName('container')[0];
   const cardContainer = document.getElementsByClassName('card-container')[0];
   const cards = Array.from(cardContainer.children);

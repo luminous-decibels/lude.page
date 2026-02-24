@@ -61,13 +61,13 @@
 }
 
 /*columnar for mobile*/
-/*
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
+@media (max-width: 500px) {
+  .card {
+    width: 180px !important; /* Or specify a fixed height */
+    height: auto !important; /* Or specify a fixed height */
   }
 }
-*/
+/* */
 
 footer {
     position: absolute;
@@ -114,57 +114,6 @@ footer {
     border-radius: 50%;
     transition: opacity 0.5s, transform 0.5s;
     pointer-events: none;
-}
-
-.cabin-sketch-regular {
-  font-family: "Cabin Sketch", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.cabin-sketch-bold {
-  font-family: "Cabin Sketch", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.libre-baskerville-500 {
-  font-family: "Libre Baskerville", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.libre-baskerville-700 {
-  font-family: "Libre Baskerville", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.lato-regular {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 1px;
-}
-
-.lato-black {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.lato-regular-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.lato-black-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: italic;
 }
 
 @keyframes bounce {
