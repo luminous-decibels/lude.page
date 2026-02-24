@@ -61,7 +61,7 @@
 }
 
 /*columnar for mobile*/
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .card {
     width: 180px !important; /* Or specify a fixed height */
     height: auto !important; /* Or specify a fixed height */
