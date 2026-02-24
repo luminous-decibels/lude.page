@@ -10,8 +10,17 @@
 }
 
 .container {
+  flex-direction: column;
   margin: 0;
-  padding: 25px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.card-container {
+  flex-direction: row;
+  margin: 0;
+  padding: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -51,6 +60,15 @@
     opacity: 1;
 }
 
+/*columnar for mobile*/
+/*
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+*/
+
 footer {
     position: absolute;
     bottom: 10px;
@@ -65,11 +83,18 @@ footer {
     /*
     position: relative;
      */
-     width: 100%; /* Expand to full width */
+    width: 100%; /* Expand to full width */
     text-align: center; /* Align text to the right */
     margin: 0; /* Reset margin */
     padding: 2px; /* Add padding if needed */
     box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+/*logo for mobile*/
+@media (max-width: 768px) {
+  .logo {
+    font-size: 3rem;
+  }
 }
 
 @keyframes wave {
@@ -209,4 +234,44 @@ footer {
 
 .custom-cursor-math {
     cursor: url('../img/cursor-3d-math.png'), auto; /* Replace with your image path */
+}
+
+.card-vanish {
+    scale: 0.9;
+    animation: card-vanish-frames 0.15s infinite;
+}
+@keyframe card-vanish-frames {
+    0% {
+      transform: translateX(-25px);
+    }
+    70% {
+      transform: translateX(-50px);
+    }
+    100% {
+      transform: translateX(-100px);
+    }
+}
+
+.progress-bar-container {
+  z-index: -5;
+  width: 100%; /* Full width */
+  max-width: 350px; /* Maximum width */
+  background-color: #a9a9a9; /* Background color of the progress bar */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+  opacity: 0.25;
+}
+
+.progress-bar {
+  height: 15px; /* Height of the progress bar */
+  background-color: lime; /* Progress color */
+  width: 0; /* Initial width */
+  border-radius: 10px;
+  animation: fill 10s forwards; /* Animation to fill the bar */
+}
+
+@keyframes fill {
+  to {
+    width: 100%; /* Fill to full width */
+  }
 }
